@@ -66,6 +66,21 @@ namespace EmployeeCRUD.Controllers
             return BadRequest();
             
         }
+
+
+        [HttpPost("UpdateEmployee")]
+
+        public async Task<ActionResult<int>> UpdateEmployee([FromBody] Employee employee)
+        { 
+            var result=await _employeeRepository.UpdateEmployee(employee);
+            if (result > 0)
+            {
+                return Ok(result);
+            }
+            return BadRequest();
+        }
+
+
        
 
     }
