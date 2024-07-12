@@ -13,6 +13,7 @@ namespace EmployeeCRUD.Controllers
         public EmployeeController(IEmployeeRepository employeeRepository)
         {
             _employeeRepository = employeeRepository;
+
         }
 
         [HttpGet("GetAllEmployees")]
