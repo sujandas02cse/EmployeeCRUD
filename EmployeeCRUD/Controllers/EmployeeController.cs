@@ -64,9 +64,7 @@ namespace EmployeeCRUD.Controllers
                 return Ok(result);
             }
             return BadRequest();
-            //sujan das
-            //JSR
-            //Hello World
+            
         }
        
 
