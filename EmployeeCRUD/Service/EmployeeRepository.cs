@@ -58,9 +58,13 @@ namespace EmployeeCRUD.Service
             }
         }
 
-        public Task<int> UpdateEmployee(Employee employee)
+        public async Task<int> UpdateEmployee(Employee employee)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(context.ConnectionString))
+            {
+                var sql = "UpdateEmployee";
+                return await connection.ExecuteAsync(sql, new { employee.Id, employee.EmployeeName, employee.DOJ, employee.Department, employee.Company }, commandType: CommandType.StoredProcedure);
+            }
         }
     }
 }

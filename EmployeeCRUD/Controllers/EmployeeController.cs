@@ -13,6 +13,7 @@ namespace EmployeeCRUD.Controllers
         public EmployeeController(IEmployeeRepository employeeRepository)
         {
             _employeeRepository = employeeRepository;
+
         }
 
         [HttpGet("GetAllEmployees")]
@@ -63,8 +64,23 @@ namespace EmployeeCRUD.Controllers
                 return Ok(result);
             }
             return BadRequest();
-            //sujan das
+            
         }
+
+
+        [HttpPost("UpdateEmployee")]
+
+        public async Task<ActionResult<int>> UpdateEmployee([FromBody] Employee employee)
+        { 
+            var result=await _employeeRepository.UpdateEmployee(employee);
+            if (result > 0)
+            {
+                return Ok(result);
+            }
+            return BadRequest();
+        }
+
+
        
 
 
