@@ -23,10 +23,22 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowSpecificOrigin",
         builder =>
         {
-            builder.WithOrigins("http://192.168.0.104:8080")
-                   .AllowAnyHeader()
-                   .AllowAnyMethod()
-                   .AllowCredentials(); // If using credentials
+
+            // for home
+            //builder.WithOrigins("http://192.168.0.104:8080")
+            //       .AllowAnyHeader()
+            //       .AllowAnyMethod()
+            //       .AllowCredentials(); // If using credentials
+
+            //for office
+
+            builder.WithOrigins("http://192.168.15.41:8081")
+                 .AllowAnyHeader()
+                 .AllowAnyMethod()
+                 .AllowCredentials(); // If using credentials
+
+
+
         });
 });
 
