@@ -49,7 +49,10 @@
     <Reports>@(Report)</Reports>
   </PropertyGroup>
   <ItemGroup>
-    <Report Include="Report1.rdl" />
+    <DataSource Include="MascoDS.rds" />
+  </ItemGroup>
+  <ItemGroup>
+    <Report Include="rptShowAllEmployee.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>

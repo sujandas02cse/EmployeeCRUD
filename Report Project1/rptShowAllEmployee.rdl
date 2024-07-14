@@ -9,24 +9,21 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>17.10.35027.167</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2024-07-14T05:26:08.8016908Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2024-07-14T05:57:04.9084731Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="DataSource1">
-      <ConnectionProperties>
-        <DataProvider>SQL</DataProvider>
-        <ConnectString>Data Source=OSMAN_MIS\SQL2022;Initial Catalog=EmployeeDB</ConnectString>
-      </ConnectionProperties>
-      <rd:SecurityType>DataBase</rd:SecurityType>
-      <rd:DataSourceID>839225bd-7916-444d-b4d8-bdd1163ce0e4</rd:DataSourceID>
+    <DataSource Name="MascoDS">
+      <DataSourceReference>MascoDS</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>bd74ec4b-dfaa-4f46-a18a-4cb389254067</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>DataSource1</DataSourceName>
+        <DataSourceName>MascoDS</DataSourceName>
         <CommandType>StoredProcedure</CommandType>
         <CommandText>GetAllEmployees</CommandText>
       </Query>
@@ -62,24 +59,24 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.78125in</Width>
+                  <Width>0.79167in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.90625in</Width>
+                  <Width>1.82292in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.29167in</Width>
+                  <Width>1.54167in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.71875in</Width>
+                  <Width>1.80208in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.69917in</Width>
+                  <Width>1.59375in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.22917in</Height>
+                  <Height>0.25in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -147,7 +144,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Date Of Joining</Value>
+                                  <Value>DOJ</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -242,9 +239,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Id.Value</Value>
-                                  <Style>
-                                    <Format>d</Format>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -299,7 +294,7 @@
                                 <TextRun>
                                   <Value>=Fields!DOJ.Value</Value>
                                   <Style>
-                                    <Format>d</Format>
+                                    <Format>dd-MMM-yyyy</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -400,10 +395,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>0.03625in</Top>
-            <Left>0.01542in</Left>
-            <Height>0.47917in</Height>
-            <Width>7.39708in</Width>
+            <Top>0.03417in</Top>
+            <Left>0.0375in</Left>
+            <Height>0.5in</Height>
+            <Width>7.55208in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -411,98 +406,15 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>0.58333in</Height>
+        <Height>0.60417in</Height>
         <Style />
       </Body>
-      <Width>7.4375in</Width>
+      <Width>7.66667in</Width>
       <Page>
-        <PageHeader>
-          <Height>0.3125in</Height>
-          <PrintOnFirstPage>true</PrintOnFirstPage>
-          <PrintOnLastPage>true</PrintOnLastPage>
-          <ReportItems>
-            <Textbox Name="Textbox11">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>MASCO GROUP</Value>
-                      <Style>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox11</rd:DefaultName>
-              <Top>0.10292in</Top>
-              <Left>0.79667in</Left>
-              <Height>0.17708in</Height>
-              <Width>4.91667in</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-              </Style>
-            </Textbox>
-          </ReportItems>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </PageHeader>
-        <PageFooter>
-          <Height>0.35417in</Height>
-          <PrintOnFirstPage>true</PrintOnFirstPage>
-          <PrintOnLastPage>true</PrintOnLastPage>
-          <ReportItems>
-            <Textbox Name="Textbox12">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Globals!ExecutionTime</Value>
-                      <Style>
-                        <FontWeight>Bold</FontWeight>
-                        <Format>DD-MM-YYYY</Format>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox12</rd:DefaultName>
-              <Top>0.06125in</Top>
-              <Left>5.94375in</Left>
-              <Height>0.25in</Height>
-              <Width>1.46875in</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-              </Style>
-            </Textbox>
-          </ReportItems>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </PageFooter>
-        <PageHeight>11.69in</PageHeight>
-        <PageWidth>8.27in</PageWidth>
-        <LeftMargin>0.25in</LeftMargin>
-        <RightMargin>0.25in</RightMargin>
-        <TopMargin>0.25in</TopMargin>
-        <BottomMargin>0.25in</BottomMargin>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
@@ -514,5 +426,5 @@
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>f2d6b095-6459-4727-9c8c-9c110bb9fedf</rd:ReportID>
+  <rd:ReportID>3258bdbf-0b64-4045-979c-3d2c829ec1f0</rd:ReportID>
 </Report>
