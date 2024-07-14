@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using EmployeeCRUD.Data;
 using EmployeeCRUD.Service;
 using Microsoft.Build.Framework;
+using ReportLibrary;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<EmployeeCRUDContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("EmployeeCRUDContext") ?? throw new InvalidOperationException("Connection string 'EmployeeCRUDContext' not found.")));
@@ -43,7 +44,8 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-    
+builder.Services.AddScoped<IReportGenerator, ReportGenerator>();
+
 
 var app = builder.Build();
 
