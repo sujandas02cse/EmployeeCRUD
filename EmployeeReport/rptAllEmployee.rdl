@@ -9,21 +9,21 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>17.10.35027.167</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2024-07-14T05:57:04.9084731Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2024-07-14T10:05:13.3496269Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="MascoDS">
-      <DataSourceReference>MascoDS</DataSourceReference>
+    <DataSource Name="EmploeeDB">
+      <DataSourceReference>EmploeeDB</DataSourceReference>
       <rd:SecurityType>None</rd:SecurityType>
-      <rd:DataSourceID>bd74ec4b-dfaa-4f46-a18a-4cb389254067</rd:DataSourceID>
+      <rd:DataSourceID>c1910aa4-5133-441d-995e-195fdcecad61</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="GetAllEmployees">
       <Query>
-        <DataSourceName>MascoDS</DataSourceName>
+        <DataSourceName>EmploeeDB</DataSourceName>
         <CommandType>StoredProcedure</CommandType>
         <CommandText>GetAllEmployees</CommandText>
       </Query>
@@ -59,19 +59,13 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.79167in</Width>
+                  <Width>1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.82292in</Width>
+                  <Width>1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.54167in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1.80208in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1.59375in</Width>
+                  <Width>1in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -81,20 +75,17 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox1">
+                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
                                   <Value>Id</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox1</rd:DefaultName>
@@ -103,6 +94,10 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -110,20 +105,17 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox3">
+                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
                                   <Value>Employee Name</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -132,6 +124,10 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -139,20 +135,17 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox5">
+                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
                                   <Value>DOJ</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox5</rd:DefaultName>
@@ -161,66 +154,10 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox7">
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Department</Value>
-                                  <Style>
-                                    <FontFamily>Arial</FontFamily>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox7</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox9">
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Company</Value>
-                                  <Style>
-                                    <FontFamily>Arial</FontFamily>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox9</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -233,6 +170,7 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Id">
+                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
@@ -242,9 +180,7 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Id</rd:DefaultName>
@@ -253,6 +189,10 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -260,6 +200,7 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="EmployeeName">
+                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
@@ -269,9 +210,7 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>EmployeeName</rd:DefaultName>
@@ -280,6 +219,10 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -287,20 +230,17 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="DOJ">
+                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!DOJ.Value</Value>
-                                  <Style>
-                                    <Format>dd-MMM-yyyy</Format>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DOJ</rd:DefaultName>
@@ -309,64 +249,10 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Department">
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!Department.Value</Value>
-                                  <Style>
-                                    <FontFamily>Arial</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Department</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Company">
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!Company.Value</Value>
-                                  <Style>
-                                    <FontFamily>Arial</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Company</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -377,8 +263,6 @@
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember />
-                <TablixMember />
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
@@ -394,11 +278,11 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DataSet1</DataSetName>
-            <Top>0.03417in</Top>
-            <Left>0.0375in</Left>
+            <DataSetName>GetAllEmployees</DataSetName>
+            <Top>0.25917in</Top>
+            <Left>0.20708in</Left>
             <Height>0.5in</Height>
-            <Width>7.55208in</Width>
+            <Width>3in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -406,10 +290,10 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>0.60417in</Height>
+        <Height>2in</Height>
         <Style />
       </Body>
-      <Width>7.66667in</Width>
+      <Width>6.5in</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>
@@ -426,5 +310,5 @@
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>3258bdbf-0b64-4045-979c-3d2c829ec1f0</rd:ReportID>
+  <rd:ReportID>bfe49be1-8bef-4953-a73a-571be2d51ebc</rd:ReportID>
 </Report>

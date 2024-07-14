@@ -52,7 +52,7 @@
     <DataSource Include="EmploeeDB.rds" />
   </ItemGroup>
   <ItemGroup>
-    <Report Include="rptShowAllEmployee.rdl" />
+    <Report Include="rptAllEmployee.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>

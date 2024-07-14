@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<RptDataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="MascoDS">
-  <ConnectionProperties>
-    <Extension>SQL</Extension>
-    <ConnectString>Data Source=OSMAN_MIS\SQL2022;Initial Catalog=EmployeeDB</ConnectString>
-  </ConnectionProperties>
-  <DataSourceID>53dceba2-36a5-4d7b-8f8b-8a958b1bed89</DataSourceID>
-</RptDataSource>
