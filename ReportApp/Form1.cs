@@ -1,4 +1,4 @@
-namespace WinFormsApp1
+namespace ReportApp
 {
     public partial class Form1 : Form
     {

@@ -1,4 +1,4 @@
-namespace WinFormsApp1
+namespace ReportApp
 {
     internal static class Program
     {

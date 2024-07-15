@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="EmployeeDBDataSet" targetNamespace="http://tempuri.org/EmployeeDBDataSet.xsd" xmlns:mstns="http://tempuri.org/EmployeeDBDataSet.xsd" xmlns="http://tempuri.org/EmployeeDBDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="dsEmployee" targetNamespace="http://tempuri.org/dsEmployee.xsd" xmlns:mstns="http://tempuri.org/dsEmployee.xsd" xmlns="http://tempuri.org/dsEmployee.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="EmployeeDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="EmployeeDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ReportLibrary.Properties.Settings.GlobalReference.Default.EmployeeDBConnectionString" Provider="System.Data.SqlClient" />
+          <Connection ConnectionStringObject="Data Source=OSMAN_MIS\SQL2022;Initial Catalog=EmployeeDB;Persist Security Info=True;User ID=sa;Password=12345678;Encrypt=False;TrustServerCertificate=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="osman_mis\sql2022.EmployeeDB.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GetAllEmployeesTableAdapter" GeneratorDataComponentClassName="GetAllEmployeesTableAdapter" Name="GetAllEmployees" UserDataComponentName="GetAllEmployeesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="EmployeeDBConnectionString (Settings)" DbObjectName="EmployeeDB.dbo.GetAllEmployees" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="osman_mis\sql2022.EmployeeDB.dbo" DbObjectName="EmployeeDB.dbo.GetAllEmployees" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.GetAllEmployees</CommandText>
@@ -34,7 +34,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="EmployeeDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="EmployeeDBDataSet" msprop:Generator_DataSetName="EmployeeDBDataSet">
+  <xs:element name="dsEmployee" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="dsEmployee" msprop:Generator_DataSetName="dsEmployee">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="GetAllEmployees" msprop:Generator_RowEvHandlerName="GetAllEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="GetAllEmployeesRowDeleted" msprop:Generator_RowDeletingName="GetAllEmployeesRowDeleting" msprop:Generator_RowEvArgName="GetAllEmployeesRowChangeEvent" msprop:Generator_TablePropName="GetAllEmployees" msprop:Generator_RowChangedName="GetAllEmployeesRowChanged" msprop:Generator_RowChangingName="GetAllEmployeesRowChanging" msprop:Generator_TableClassName="GetAllEmployeesDataTable" msprop:Generator_RowClassName="GetAllEmployeesRow" msprop:Generator_TableVarName="tableGetAllEmployees" msprop:Generator_UserTableName="GetAllEmployees">
