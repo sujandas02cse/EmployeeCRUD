@@ -1,9 +1,11 @@
 ﻿using AspNetCore.Reporting;
+using EmployeeCRUD.Data;
 using EmployeeCRUD.Models;
 using EmployeeCRUD.Service;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
+using System.Data.SqlClient;
 using System.Net.Mime;
 using System.Text;
 
@@ -15,10 +17,13 @@ namespace EmployeeCRUD.Controllers
     {
         private readonly IEmployeeRepository _employeeRepository;
         private readonly IWebHostEnvironment _webHostEnvironment;
-        public EmployeeController(IEmployeeRepository employeeRepository, IWebHostEnvironment webHostEnvironment)
+        private readonly EmployeeCRUDContext context;
+
+        public EmployeeController(IEmployeeRepository employeeRepository, IWebHostEnvironment webHostEnvironment, EmployeeCRUDContext context)
         {
             _employeeRepository = employeeRepository;
             _webHostEnvironment = webHostEnvironment;
+            this.context = context;
         }
 
         [HttpGet("GetAllEmployees")]
@@ -88,26 +93,13 @@ namespace EmployeeCRUD.Controllers
         [HttpGet("EmployeeReport")]
         public async Task<ActionResult> EmployeeReport()
         {
-            // Ensure encoding provider is registered
-            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            var reportBytes = await _employeeRepository.GenerateEmployeeReport();
 
-            string wwwRootFolder = _webHostEnvironment.WebRootPath;
-            string reportPath = Path.Combine(wwwRootFolder, @"Reports\rptEmployee.rdlc");
-
-            // Create an empty DataTable if necessary
-            DataTable empData = new DataTable();
-            empData.Columns.Add("Id", typeof(int));
-            empData.Columns.Add("Name", typeof(string));
-            empData.Columns.Add("Position", typeof(string));
-
-            var localReport = new LocalReport(reportPath);
-            localReport.AddDataSource("dsEmployee", empData); // Add the empty DataTable as a data source
-
-            var reportResult = localReport.Execute(RenderType.Pdf, 1, null);
-
-            return File(reportResult.MainStream, MediaTypeNames.Application.Octet, "EmployeeRpt.pdf");
-
-
+            if (reportBytes == null || reportBytes.Length == 0)
+            {
+                return NoContent(); // or handle the empty result case as needed
+            }
+            return File(reportBytes, MediaTypeNames.Application.Octet, "EmployeeRpt.pdf");
         }
 
 

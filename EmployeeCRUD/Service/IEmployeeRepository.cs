@@ -10,6 +10,6 @@ namespace EmployeeCRUD.Service
         Task<int> UpdateEmployee(Employee employee);
         Task<int> DeleteEmployeeById(int id);
 
-
+        Task<byte[]> GenerateEmployeeReport();
     }
 }
