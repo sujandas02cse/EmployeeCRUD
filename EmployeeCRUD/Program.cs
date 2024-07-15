@@ -3,8 +3,15 @@ using Microsoft.Extensions.DependencyInjection;
 using EmployeeCRUD.Data;
 using EmployeeCRUD.Service;
 using Microsoft.Build.Framework;
+using System.Text;
+
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+// Register the encoding provider
+Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+
 builder.Services.AddDbContext<EmployeeCRUDContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("EmployeeCRUDContext") ?? throw new InvalidOperationException("Connection string 'EmployeeCRUDContext' not found.")));
 
