@@ -33,17 +33,17 @@ builder.Services.AddCors(options =>
         {
 
             // for home
-            //builder.WithOrigins("http://192.168.0.104:8080")
-            //       .AllowAnyHeader()
-            //       .AllowAnyMethod()
-            //       .AllowCredentials(); // If using credentials
+            builder.WithOrigins("http://192.168.0.104:8080")
+                   .AllowAnyHeader()
+                   .AllowAnyMethod()
+                   .AllowCredentials(); // If using credentials
 
             //for office
 
-            builder.WithOrigins("http://192.168.15.102:8081")
-                 .AllowAnyHeader()
-                 .AllowAnyMethod()
-                 .AllowCredentials(); // If using credentials
+            //builder.WithOrigins("http://192.168.15.102:8081")
+            //     .AllowAnyHeader()
+            //     .AllowAnyMethod()
+            //     .AllowCredentials(); // If using credentials
 
 
 

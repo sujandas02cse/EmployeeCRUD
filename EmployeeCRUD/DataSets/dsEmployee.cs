@@ -2,6 +2,10 @@
 {
 }
 
+namespace EmployeeCRUD.DataSets
+{
+}
+
 namespace ReportApp.DataSets
 {
 }
